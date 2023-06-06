@@ -6,8 +6,8 @@ const gen = require('./utils/generateMarkdown.js');
 const questions = [
     {
         type: 'input',
-        message: 'What is the name of the app?',
-        name: 'name'
+        message: 'What is the title of the app?',
+        name: 'title'
     },
     {
         type: 'input',
@@ -40,6 +40,21 @@ const questions = [
         name: 'credits'
     },
     {
+        type: 'input',
+        message: 'What tests did you uses',
+        name: 'tests'
+    },
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'github'
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'email'
+    },
+    {
         type: 'list',
         message: 'What kind of license do you want?',
         choices: ['MIT', 'apache-2-0'],
@@ -61,7 +76,6 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((answers) => {
-        console.log(answers.name)
         writeToFile('README.md', answers)
     })
     .catch((error) => {
