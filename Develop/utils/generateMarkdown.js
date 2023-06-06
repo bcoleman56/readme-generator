@@ -31,22 +31,27 @@ function generateMarkdown(data) {
 [![License Badge]( ${renderLicenseSection(data.license)} )    
 
 ## Description
+
 ${data.description}
 
 
 ## Installation
+
 ${data.installation}
 
 
 ## Usage
+
 ${data.usage}
 
 
 ## Credits
+
 ${data.credits}
 
 
 ## How to Contribute
+
 ${data.contribute}
 
 
